@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(105deg,
+            hsl(309deg 80% 76%) 0%,
+            hsl(286deg 67% 75%) 12%,
+            hsl(264deg 67% 76%) 25%,
+            hsl(243deg 61% 75%) 39%,
+            hsl(225deg 59% 69%) 52%,
+            hsl(214deg 54% 62%) 65%,
+            hsl(207deg 48% 56%) 76%,
+            hsl(202deg 41% 50%) 85%,
+            hsl(197deg 38% 46%) 91%,
+            hsl(193deg 33% 44%) 96%,
+            hsl(188deg 25% 42%) 99%,
+            hsl(182deg 17% 40%) 100%,
+            hsl(174deg 11% 39%) 100%);
+    background-size: 400%;
+    position: relative;
+    animation: linerBackground 8s infinite alternate;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 15rem;
+    background: linear-gradient(
+    45deg,
+    hsl(248deg 61% 72%) 0%,
+    hsl(201deg 82% 68%) 2%,
+    hsl(179deg 50% 79%) 5%,
+    hsl(120deg 100% 99%) 10%,
+    hsl(43deg 62% 75%) 17%,
+    hsl(8deg 100% 71%) 25%,
+    hsl(316deg 84% 50%) 34%,
+    hsl(359deg 100% 62%) 45%,
+    hsl(44deg 100% 44%) 57%,
+    hsl(117deg 79% 52%) 70%,
+    hsl(179deg 100% 40%) 83%,
+    hsl(202deg 100% 50%) 94%,
+    hsl(246deg 79% 61%) 100%
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes linerBackground {
+    from {
+        background-position: 0%;
+    }
+
+    to {
+        background-position: 100%;
+    }
+}
+
+.cube {
+    width: 10px;
+    height: 10px;
+    border: 1px solid white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: cubeRotate 3s infinite;
+   
+}
+
+.cube:nth-child(2) {
+    top: 30%;
+    left: 80%;
+    animation-delay: 8s;
+}
+
+.cube:nth-child(3) {
+    top: 10%;
+    left: 70%;
+    animation-delay: 7s;
+}
+
+.cube:nth-child(4) {
+    top: 20%;
+    left: 30%;
+    animation-delay: 5s;
+}
+
+.cube:nth-child(5) {
+    top: 90%;
+    left: 15%;
+    animation-delay: 2s;
+}
+
+.cube:nth-child(6) {
+    top: 80%;
+    left: 30%;
+    animation-delay: 6s;
+}
+
+@keyframes cubeRotate {
+    from {
+        transform: scale(0) rotate(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(20) rotate(1000deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
